@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <script> 
+
+      let variable1 = 3; 
+      console.log(variable1);
+
+      const calculation = 2+2;
+      console.log(calculation);
+      console.log(calculation + 2);
+
+      const result = calculation + 2;
+      console.log(result)
+
+      const message = 'hello';
+      console.log(message); console.log(';'); 
+      /*SEMICOLON
+      Semicolon means end of an instruction in JavaScript. It's similir to period in English */
+
+      //RE-ASSIGNING A VARIABLE VALUE
+      //WE DON'T USE LET, WE JUST TYPE THE VARIABLE NAME, THEN EQUAL, THEN THE NEW VALUE, LIKE THE LINE BELOW
+      variable1 = 5; 
+      console.log(variable1);
+
+      //LET'S RE-ASSIGN VARIABLE 1 AGAIN
+
+      variable1 = variable1 + 1; 
+      console.log(variable1)
+
+      const variable2 = 3;
+      var variable = 3; 
+
+      console.log(typeof 3);
+      console.log(typeof variable2);
+      console.log(typeof message);
+      </script>
+  </body>
+</html>
+
+<!--
+VARIABLES NAME RESTRICTIONS:
+
+1. Can't use special worlds 
+Example: let
+2. Can't start with a number
+3. Can't use special characters except: $ and _ 
+-->
+
+<!--
++= 2 variable = variable + 2
+-= 2 variable = variable - 2
+*= 2 variable = variable * 2
+/= 2 variable = variable / 2
+++   variable = variable + 1
+--   variable = variable - 1
+-->
+
+<!--
+JavaScript uses camelCase, like in Swift
+-->
+
+
+<!--
+Is good practice to use a variable name that is not too short or too long
+-->
+
+<!--
+THREE WAYS TO CREATE VARIABLES
+
+1. let 
+
+2. const (constant that cannot be changed later). USE CONST BY DEFAULT
+Makes the code safer and easy to understand. It's best practice to use const by default. Only use let when we know the variable needs to be changed later 
+
+3. var (old way of creating variable)
+There are some issues with var and we're going to learn later why it's not used anymore. However, it's good to know about it cause there are some JS code that might have var as a variable
+-->
+
+<!--TYPEOF
+We can use typeof to check the type of value that is saved inside a variable -->
+
+<!--
+In this lesson we learnt: 
+1. Variables = a way to save values 
+2. Re-assign a variable 
+3. Created the Cart Quantity feature 
+4. Shortcuts for re-assigning a variable 
+5. Naming conventions and best practices 
+6. 3 ways to create a variable: let, const, var 
+-->

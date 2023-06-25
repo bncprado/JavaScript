@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions  </title>
+</head>
+<body>
+
+</body>
+  <script>
+
+
+//SYNTAX RULES FOR FUNCTIONS
+
+    // function functionName ()//Rules for function names: 1. Can't use special words, ex: "function". 2. Can't start with a number. 3. Can't use special characters except $ and _. Best practice is to use camelCase. A recommendation is to use an verb or action name for naming the functions
+    // { //inside the curly brackets is where the function body goes
+    //   console.log('hello')
+    //   console.log(2+2)
+    // }//this function only creates the function code. It doesn't run the function or do anything else. In order to call (run, execute) the function, we need to type the name of the function with the brackets:
+
+    // functionName()
+
+ //PARAMETERS: Puts a value INTO a funcion
+ //Rules for parameters names: 1. Can't use special words, ex: "function". 2. Can't start with a number. 3. Can't use special characters except $ and _. Best practice is to use camelCase
+ //we can add more than 1 parameter
+      function calculateTax(parameter1, parameter2 = 0.1){//if we pass a value into a parameter, that becomes a default value. If you don't pass the  argument like in the line 33, you get the default parameter value. This happens ONLY when you define a default value.
+        console.log(parameter1*parameter2)
+      }
+
+      calculateTax(2000, 0.2)//when we put a value inside the function we say "PASSING A VALUE INTO THE FUNCTION". The VALUE for the function is also called ARGUMENT
+      calculateTax(2000)
+
+  </script>
+</html>

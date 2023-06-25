@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9j. localStorage Calculator</title>
+</head>
+<body>
+
+  <p>
+    <button onclick="
+     updateCalculation(1)
+     ">
+      1
+    </button>
+
+    <button onclick="
+      updateCalculation(2)">
+      2 
+    </button>
+
+    <button onclick="
+      updateCalculation(3)">
+      3 
+    </button>
+  </p> 
+
+  <p>
+    <button onclick="
+      updateCalculation(4)">
+      4 
+    </button>
+
+    <button onclick="
+      updateCalculation(5)">
+      5 
+    </button>
+
+    <button onclick="
+      updateCalculation(6)">
+      6 
+    </button>
+  </p> 
+
+  <p>
+    <button onclick="
+      updateCalculation(7)">
+      7 
+    </button>
+
+    <button onclick="
+      updateCalculation(8)">
+      8 
+    </button>
+
+    <button onclick="
+      updateCalculation(9)">
+      9 
+    </button>
+  </p> 
+
+    <button onclick="
+    updateCalculation(0)">
+    0 
+    </button>
+    
+    <button onclick="
+    updateCalculation(' + ')">
+    + 
+    </button>
+
+    <button onclick="
+    eval(calculation);
+    calculation = eval(calculation)
+    localStorage.setItem('calculation', calculation)
+    document.querySelector('.js-show-calc-result').innerHTML = `${calculation}`">
+    = 
+    </button>
+   
+   <!--The button below wasn't in the exercise. I'm pretty happy that I added a "clear" button to the calculator without instruction. It's a good progress understanding how it works-->
+   <button onclick="
+    calculation = '0'; 
+    document.querySelector('.js-show-calc-result').innerHTML = `0`">
+    C
+    </button>
+
+    <p class="js-show-calc-result"></p>
+
+      
+  
+  <script>
+    let calculation = '';
+
+    console.log(localStorage.getItem('calculation'))
+
+
+    function updateCalculation (number){
+      calculation += number
+      return document.querySelector('.js-show-calc-result').innerHTML = `result is ${localStorage.getItem('calculation')}`
+      }
+
+
+  </script>
+
+</body>
+</html>

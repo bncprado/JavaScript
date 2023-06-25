@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9i</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`cartQuantity: ${cartQuantity}`);
+      "> Show Quantity </button>
+
+    <button onclick="
+      updateCartQuantity(1)
+    "> Add To Cart </button>
+
+    <button onclick="
+      updateCartQuantity(2)
+    "> +2 </button>
+
+    <button onclick="
+      updateCartQuantity(3)
+    "> +3 </button>
+
+    <button onclick="
+      updateCartQuantity(4)
+    "> +4 </button>
+
+    <button onclick="
+      updateCartQuantity(5)
+    "> +5 </button>
+
+    <button onclick="
+    cartQuantity = 0;
+    alert(`Cart was reset`);
+    cartQuantityFctn()
+    "> Reset Cart </button>
+
+    <button onclick="
+    updateCartQuantity(-1);
+      "> Remove from cart </button>
+
+    <button onclick="
+      updateCartQuantity(-2)
+      "> -2 </button>
+
+    <button onclick="
+      updateCartQuantity(-3)
+    "> -3 </button>
+
+    <p class="js-cart-quantity"></p>
+
+    <script> 
+      let cartQuantity = 0;
+      
+      function cartQuantityFctn(){
+          document.querySelector('.js-cart-quantity').innerHTML = `cartQuantity: ${cartQuantity}`
+        }
+      
+        cartQuantityFctn()
+      
+      function updateCartQuantity(number){
+        if (cartQuantity + number >=11 ){
+          return alert(`Max cart items is 10. You already have added ${cartQuantity} items`)
+        } else if (cartQuantity + number < 0){
+          return alert(`There are no more items to remove`)
+        }
+        cartQuantity += number;
+        return document.querySelector('.js-cart-quantity').innerHTML = `cartQuantity: ${cartQuantity}`
+      }
+
+        
+        
+    </script>
+  </body>
+</html>

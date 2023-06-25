@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8i coin flip</title>
+</head>
+<body>
+  <button onclick="
+ playGame('heads')
+    ">Heads</button>
+  
+  <button onclick="
+ playGame('tails')
+    ">Tails</button>
+  
+  <script>
+
+   let score = {
+    wins: 0,
+    losses: 0,
+    }
+
+function playGame(guess){
+
+  let randomNumber = Math.random()
+  
+  if (randomNumber < 0.5){
+    result = 'heads'} 
+    else {
+    result = 'tails'
+    }
+
+  if (result === guess){
+    console.log('You win')
+    score.wins ++
+    } else {
+    console.log('You lose')
+    score.losses ++
+    }
+
+    console.log(score)
+
+  // if (result === 'You win'){score.wins ++}
+  // else if (result === 'You lose'){score.losses ++}
+  // console.log(score)
+}
+
+
+
+</script>
+</body>
+</html>

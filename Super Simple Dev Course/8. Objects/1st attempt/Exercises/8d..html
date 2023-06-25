@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8c</title>
+  </head>
+  <body>
+    <script> 
+
+    product1 = {
+      name: 'RGB fan',
+      price: 15
+    }
+    product2 = {
+      name: 'Non RGB fan',
+      price: 10
+    }
+    
+    function comparePrice(obj1, obj2){
+      if (product1.price < product2.price){
+        console.log(`${product1.name} is cheaper than ${product2.name}`)
+      } else {
+        console.log(`${product2.name} is cheaper than ${product1.name}`)
+      }
+    }
+
+    comparePrice(product1.name, product2.name)
+    </script>
+  </body>
+</html>

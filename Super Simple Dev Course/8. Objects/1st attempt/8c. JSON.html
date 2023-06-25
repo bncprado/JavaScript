@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8c. JSON</title>
+</head>
+<body>
+  <!-- BUILT IN OBJECTS
+
+  JSON means = JavaScript Object Notation 
+    - a syntax
+    - similar to JavaScript object, but with less features
+    - Does not support single quotes
+    - Does not support functions
+
+  Why use JSON if it's inferior?
+    JS only makes sense in JS. JSON can be understood by almost every programming language. For this reason, we use JSON to send data between computers that uses different programming languages. 
+    Also use JSON to store data
+
+    -->
+
+    <script>
+
+      const product2 = {
+        name:'shirt',
+        ['delivery-time']: '1 day',
+        rating:{ //NESTED OBJECT. Object inside of an object
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){//FUNCTION INSIDE OF AN OBJECT is called METHOD. console.log() is an object with a function
+          console.log('function inside object')
+        }
+      }
+  
+      console.log(product2)
+      console.log(product2.name)
+      console.log(product2['name'])//this is called bracket notation. It does the same as dot notation. It gets the value associated with the name property. Both line 17 and 18 access the string 'shirt'. We use the bracket notation when the dot notation does not work. EX:
+      
+      //console.log(product2.delivery-time)//this property will give us an error cause JS thinks the dash sign is a minus sign and will try a math operation, which is not the case
+      console.log(product2['delivery-time'])
+      //bracket let's us use properties that normally don't work with dot notation 
+      
+      console.log(product2.rating)
+      console.log(product2.rating.count)
+  
+      product2.fun()
+  
+      console.log(typeof console)
+      console.log(typeof console.log)
+      
+      //CONVERTING FROM JS TO JSON
+      console.log(JSON.stringify(product2))//mind that the function is not showing in the console
+
+      //CONVERTING FROM JSON TO JS
+      console.log(JSON.parse(JSON.stringify(product2)))
+  
+  
+  
+    </script>
+</body>
+</html>

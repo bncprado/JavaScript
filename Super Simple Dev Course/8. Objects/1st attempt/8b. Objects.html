@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8b. Object </title>
+</head>
+<body>
+  <script>
+
+    const product2 = {
+      name:'shirt',
+      ['delivery-time']: '1 day',
+      rating:{ //NESTED OBJECT. Object inside of an object
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1(){//FUNCTION INSIDE OF AN OBJECT is called METHOD. console.log() is an object with a function
+        console.log('function inside object')
+      }
+    }
+
+    console.log(product2)
+    console.log(product2.name)
+    console.log(product2['name'])//this is called bracket notation. It does the same as dot notation. It gets the value associated with the name property. Both line 17 and 18 access the string 'shirt'. We use the bracket notation when the dot notation does not work. EX:
+    
+    //console.log(product2.delivery-time)//this property will give us an error cause JS thinks the dash sign is a minus sign and will try a math operation, which is not the case
+    console.log(product2['delivery-time'])
+    //bracket let's us use properties that normally don't work with dot notation 
+    
+    console.log(product2.rating)
+    console.log(product2.rating.count)
+
+    product2.fun()
+
+    console.log(typeof console)
+    console.log(typeof console.log)
+
+
+
+
+  </script>
+</body>
+</html>

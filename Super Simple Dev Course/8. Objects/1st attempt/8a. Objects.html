@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  
+  <script>
+  // OBJECTS
+  // An object groups multiple value together
+
+  const product = {
+      name: 'socks', //the value on the left is the property. Allows us to access specific values in the object (line20 and 21)
+      // we can also use the property to change the value inside an object (line 24 and 25)
+      price: 1090
+    }
+    console.log(product)
+    console.log(product.name)
+    console.log(product.price)
+
+    product.name = 'cotton socks'
+    console.log(product)
+  
+    //SYNTAX RULES FOR OBJECTS
+    const object = {
+      property: 'value', //separate property and vale with a colon (:). Property and value together are named "Property-Value Pair"
+      property2: 'value2'//we can have more than one Property-Value pairs. Just ad a comma to separate them
+    }
+
+    console.log(object.property)//to access the value inside the object, we type the object name, and then dot and then the property we want to access. This will give us the value associated with the property. This syntax is called DOT NOTATION.
+
+    console.log(object.doesntExist)//if we access a property that doesn't exist, the value will be undifined
+    
+    object.property = 'something else'//to change a value in an object, we can use the dot notation. 
+    console.log(object.property)
+    
+    object.newProperty = true
+    console.log(object)//now we can see the newProperty in the object
+    
+    delete object.newProperty
+    console.log(object)//now we have deleted the last added property
+
+    // An object is another type of value. We can save an object inside a variable and we can also console.log objects
+    console.log(typeof object)//we can see in the console that is an OBJECT
+
+
+  //WHY WE USE OBJECTS
+  //- make our code more organized
+  //- let use group and use multiple values together
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//SECOND PART OF OBJECTS
+
+  </script>
+</body>
+</html>

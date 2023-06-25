@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8k coin flip</title>
+</head>
+<body>
+  <button onclick="
+ playGame('heads')
+    ">Heads</button>
+  
+  <button onclick="
+ playGame('tails')
+    ">Tails</button>
+  
+  <script>
+
+
+// Initialize score object
+let score = {
+  wins: 0,
+  losses: 0,
+};
+
+// Load score from localStorage if it exists
+if (localStorage.getItem('score')) {
+  score = JSON.parse(localStorage.getItem('score'));
+}
+
+function playGame(guess) {
+  let randomNumber = Math.random();
+  let result;
+
+  if (randomNumber < 0.5) {
+    result = 'heads';
+  } else {
+    result = 'tails';
+  }
+
+  if (result === guess) {
+    console.log('You win');
+    score.wins++;
+  } else {
+    console.log('You lose');
+    score.losses++;
+  }
+
+  // Save updated score to localStorage
+  localStorage.setItem('score', JSON.stringify(score));
+}
+
+    console.log(score)
+
+//I USED CHAT GPT TO FIGURE THIS OUT CAUSE IT WAS DIFFICULT TO UNDERSTANDARD
+
+
+
+
+
+</script>
+</body>
+</html>

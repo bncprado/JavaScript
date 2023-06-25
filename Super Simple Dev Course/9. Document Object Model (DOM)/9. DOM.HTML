@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <!-- <script src="sandbox.js"></script> -->
+</head>
+<body>
+  <button>Hello</button>
+  <button class="js-button">Second button</button>
+</body>
+<script>
+
+
+
+/* 
+
+document.body.innerHTML = 'hello'
+document.title = 'Good Job'
+
+*/
+
+
+// console.log(document.title)
+
+// document.title = 'Changed'
+
+// console.log(document.body)
+// console.log(typeof document.body)
+
+// console.log(document.body.innerHTML)
+// document.body.innerHTML = '<button>Good Job</button>'
+
+console.log(document.querySelector('button'))
+
+document.querySelector('button').innerHTML='Changed'
+
+const buttonElement = document.querySelector('.js.button')
+
+console.log(buttonElement)
+
+</script>
+</html>

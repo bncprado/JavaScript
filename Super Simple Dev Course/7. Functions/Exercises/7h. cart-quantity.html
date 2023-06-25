@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`cartQuantity: ${cartQuantity}`);
+      "> Show Quantity </button>
+
+    <button onclick="
+      updateCartQuantity(1)
+    "> Add To Cart </button>
+
+    <button onclick="
+      updateCartQuantity(2)
+    "> +2 </button>
+
+    <button onclick="
+      updateCartQuantity(3)
+    "> +3 </button>
+
+    <button onclick="
+      updateCartQuantity(4)
+    "> +4 </button>
+
+    <button onclick="
+      updateCartQuantity(5)
+    "> +5 </button>
+
+    <button onclick="
+      updateCartQuantity(0)
+    console.log(`\nCart was reset\n\nCartquantity 0`);
+    "> Reset Cart </button>
+
+    <button onclick="
+      updateCartQuantity(-1)
+    "> Remove from cart </button>
+
+    <button onclick="
+      updateCartQuantity(-2)
+    "> -2 </button>
+
+    <script> 
+      let cartQuantity = 0;
+
+      function updateCartQuantity(number){
+        cartQuantity += number;
+        return console.log(`cartQuantity: ${cartQuantity}`);
+      }
+    </script>
+  </body>
+</html>
+

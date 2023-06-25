@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8c</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`cartQuantity: ${cartQuantity}`);
+      "> Show Quantity </button>
+
+    <button onclick="
+      updateCartQuantity(1)
+    "> Add To Cart </button>
+
+    <button onclick="
+      updateCartQuantity(2)
+    "> +2 </button>
+
+    <button onclick="
+      updateCartQuantity(3)
+    "> +3 </button>
+
+    <button onclick="
+      updateCartQuantity(4)
+    "> +4 </button>
+
+    <button onclick="
+      updateCartQuantity(5)
+    "> +5 </button>
+
+    <button onclick="
+    cartQuantity = 0;
+    console.log(`Cart was reset`);
+    console.log(`cartQuantity: ${cartQuantity}`);
+    "> Reset Cart </button>
+
+    <button onclick="
+    cartQuantity --;
+    console.log(`cartQuantity: ${cartQuantity}`);
+    "> Remove from cart </button>
+
+    <button onclick="
+      updateCartQuantity(-2)
+    "> -2 </button>
+
+    <script> 
+
+    const basketball = {
+      price:2095
+    }
+    basketball.price = 2595
+    basketball['delivery-time'] = '3 days'
+    console.log(basketball)
+
+      let cartQuantity = 0;
+
+      function updateCartQuantity(number){
+        if (cartQuantity + number >=11 ){
+          return console.log(`Max cart items is 10. You already have added ${cartQuantity} items`)
+        }
+        cartQuantity += number;
+        return console.log(`cartQuantity: ${cartQuantity}`);
+      }
+    </script>
+  </body>
+</html>

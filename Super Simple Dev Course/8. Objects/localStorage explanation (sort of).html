@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>localStorage</title>
+</head>
+<body>
+  <script>
+
+    // STEP 1. CREATE AN OBJECT
+    let myObj = {
+      name: "Domenic",
+      age: 56
+    }
+    console.log(`STEP1. Creating an object`)
+    console.log(myObj)
+
+
+    // STEP 2. SET THE LOCAL STORAGE
+    localStorage.setItem('myObj', myObj)//(the name of the localstorage item + what we are storing inside localstorage)
+    console.log(`STEP 2. SET THE LOCAL STORAGE`)
+    console.log(localStorage)
+    /*it's storing as we can see in the console, but it's just showing the value `Object Object` cause localStorage can read only strings, not objects. So we have to convert the object 'myObj' to a string*/
+
+    //STEP 3. CONVERT AN OBJECT TO A STRING
+    let myObj_to_string = JSON.stringify(myObj)
+    console.log(`STEP 3. CONVERT AN OBJECT TO A STRING`)
+    console.log(myObj_to_string)
+
+    //STEP 4. setItem to the new converted object to string
+    localStorage.setItem('myObj', myObj_to_string)
+    console.log(`STEP 4. setItem to the new converted object to string`)
+    console.log(localStorage)
+
+    //STEP 5. CONVERTING THE STRING BACK TO OBJECT
+    let myObj_to_string_to_object = JSON.parse(localStorage.getItem('myObj'))
+    console.log(`STEP 5. CONVERTING THE STRING BACK TO OBJECT`)
+    console.log(myObj_to_string_to_object)
+
+
+   
+  </script>
+</body>
+</html>
